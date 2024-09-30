@@ -1,0 +1,224 @@
+body{
+    background-color: #FFF1FA;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    color: whitesmoke;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #181C14;
+    align-items: center;
+}
+
+.logo img{
+    width: 80px;
+    height: 40px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 60px;
+}
+
+.nav-link:hover{
+    background-color: gray;
+    border: 1px solid red;
+}
+
+.menu-toggle{
+    display: none;
+}
+.menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    color: #e0e0e0;
+    display: none; /* Hidden by default */
+}
+.menu{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.menu-toggle:hover{
+    background-color: #FFF1FA;
+    color: red;
+}
+
+.button{
+    padding: 10px;
+    border-radius: 60px;
+    background-color: red;
+    color: aliceblue;
+    text-decoration: none;
+    border: 1px solid red;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color: #FFF1FA;
+    color: red;
+}
+
+.hero{
+    background: url(poster.jpg) no-repeat center/cover;
+    padding: 10px;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+h1, h2, p{
+    color: black;
+    line-height: 10px;
+}
+
+.product01{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product01-grid img{
+    width: 20%;
+    height: 40%;
+}
+
+.product01-grid{
+    gap: 20px;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.product-card{
+    background-color:#FFF1FA;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #D8D2C2;
+}
+
+.product-card:hover{
+    box-shadow: 0px 0px 2px 2px red;
+}
+
+.retail, .residential, .store{
+    padding: 10px;
+    border-radius: 60px;
+    background-color: red;
+    color: aliceblue;
+    text-decoration: none;
+    border: 2px solid red;
+    font-weight: bold;
+}
+
+.retail:hover, .residential:hover, .store:hover{
+    background-color: #FFF1FA;
+    color: red;
+}
+
+.facility{
+    background-color: #D91656;
+    text-align: center;
+    padding: 10px;
+}
+
+.facility-grid img{
+    width: 20%;
+    height: 40%;
+}
+
+.facility-grid{
+    gap: 20px;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.facility-card{
+    background-color:#FFF1FA;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #D8D2C2;
+}
+
+.facility-card img{
+    border-radius: 50%;
+    position: relative;
+    padding: 2px;
+    border: 2px solid #D8D2C2;
+}
+
+.facility-card:hover{
+    box-shadow: 0px 0px 10px 10px rgb(54, 50, 50);
+}
+
+@media(min-width: 769px){
+    .hamburger{
+        display: none;
+    }
+}
+
+@media(max-width: 768px){ /*ipad*/
+    .menu{
+        display: none; /* Hide the menu by default */
+        flex-direction: column; /* Stack links vertically */
+        background-color: #1f1f1f;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%; /* Full-width menu */
+        padding: 10px 0;
+        text-align: center;
+        border-top: 1px solid #333;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .nav-link{
+        padding: 10px;
+        width: 100%; /* Full-width links */
+        border-radius: 0; /* Remove border radius for mobile view */
+    }
+    .product01-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .facility-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .menu-toggle:checked + .menu-icon + .menu{
+        display: flex;
+       
+    }
+}
+
+/* @media(max-width: 500px){ 
+    
+    .menu-icon{
+        display: block;
+    }
+    .menu-toggle{
+        display: none;
+    }
+    .product01-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .facility-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .menu-toggle:checked + .menu-icon + .menu{
+        display: block;
+       
+    }
+}*/
