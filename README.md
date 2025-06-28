@@ -53,7 +53,7 @@ Store/
 1. Clone the repository:
    ```bash
    git clone https://github.com/AbuBaker-AB/Store.git
-````
+   
 
 2. Open `index.html` in any modern web browser.
 3. Adjust `style.css` or image assets to customize the look.
